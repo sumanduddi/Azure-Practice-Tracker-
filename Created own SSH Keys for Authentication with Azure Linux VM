@@ -1,0 +1,84 @@
+{
+    "name": "VM3",
+    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Compute/virtualMachines/VM3",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "centralindia",
+    "properties": {
+        "hardwareProfile": {
+            "vmSize": "Standard_B1s"
+        },
+        "provisioningState": "Succeeded",
+        "vmId": "bb7d996a-d85d-42b1-9229-513281752e65",
+        "additionalCapabilities": {
+            "hibernationEnabled": false
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "canonical",
+                "offer": "ubuntu-24_04-lts",
+                "sku": "ubuntu-pro",
+                "version": "latest",
+                "exactVersion": "24.04.202505020"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "VM3_OsDisk_1_c6eba9af86d543a3bd6c0d3e7ea0fda3",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Compute/disks/VM3_OsDisk_1_c6eba9af86d543a3bd6c0d3e7ea0fda3"
+                },
+                "deleteOption": "Delete",
+                "diskSizeGB": 30
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "VM3",
+            "adminUsername": "sduddi",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": true,
+                "ssh": {
+                    "publicKeys": [
+                        {
+                            "path": "/home/sduddi/.ssh/authorized_keys",
+                            "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCT4NqxqIFyDi0tawWHaZ42yv4x10tm4isviFx2fyRDe97TIfoLXTIHi3rmiVLgEx3SN+TZyYetmRC0iXm5J8swyJk5mjN87e1uCxYpNmnAxd+avjDQxEr3/r5FAWxGzKtWk0L+57+aLBuFrEcofIgjCigDhGVoilfEVowO+hl1k+wGkwS8BUQVeDuSzrma/CgCcl8gSuEqYm+U/pJWv/3bU2dlmIrv9CiNb/aWB9FCERunXJ2pRNC/MM97Z93Np2vKymrw5kZ4sumEmH1f7+Jp7oEcm7Z7tWRQdE+wsvjkb6PFsx9xyNJ+8pkTTwb6c4LvAgs/Jh8JjNRToDdrw4p5 rsa-key-20250505"
+                        }
+                    ]
+                },
+                "provisionVMAgent": true,
+                "patchSettings": {
+                    "patchMode": "ImageDefault",
+                    "assessmentMode": "ImageDefault"
+                }
+            },
+            "secrets": [],
+            "allowExtensionOperations": true,
+            "requireGuestProvisionSignal": true
+        },
+        "securityProfile": {
+            "uefiSettings": {
+                "secureBootEnabled": true,
+                "vTpmEnabled": true
+            },
+            "securityType": "TrustedLaunch"
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/networkInterfaces/vm3211",
+                    "properties": {
+                        "deleteOption": "Detach"
+                    }
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        }
+    },
+    "apiVersion": "2021-03-01"
+}
