@@ -1,0 +1,96 @@
+{
+    "name": "VPNGW1",
+    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworkGateways/VPNGW1",
+    "etag": "W/\"f5dd4de7-15c4-4ac7-82f6-b14bcfeb6da6\"",
+    "type": "Microsoft.Network/virtualNetworkGateways",
+    "location": "centralindia",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "363217f0-3f78-4422-9949-43a64701bc37",
+        "enablePrivateIpAddress": false,
+        "virtualNetworkGatewayMigrationStatus": {
+            "state": "None",
+            "phase": "None",
+            "errorMessage": ""
+        },
+        "ipConfigurations": [
+            {
+                "name": "default",
+                "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworkGateways/VPNGW1/ipConfigurations/default",
+                "etag": "W/\"f5dd4de7-15c4-4ac7-82f6-b14bcfeb6da6\"",
+                "type": "Microsoft.Network/virtualNetworkGateways/ipConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "publicIPAddress": {
+                        "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/publicIPAddresses/VPNGW1-ip"
+                    },
+                    "subnet": {
+                        "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/GatewaySubnet"
+                    }
+                }
+            }
+        ],
+        "virtualNetworkGatewayPolicyGroups": [],
+        "sku": {
+            "name": "VpnGw1",
+            "tier": "VpnGw1",
+            "capacity": 2
+        },
+        "gatewayType": "Vpn",
+        "vpnType": "RouteBased",
+        "enableBgp": false,
+        "activeActive": false,
+        "vpnClientConfiguration": {
+            "vpnClientAddressPool": {
+                "addressPrefixes": [
+                    "192.168.1.0/24"
+                ]
+            },
+            "vpnClientProtocols": [
+                "SSTP"
+            ],
+            "vpnClientRootCertificates": [
+                {
+                    "name": "azure",
+                    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworkGateways/VPNGW1/vpnClientRootCertificates/azure",
+                    "etag": "W/\"f5dd4de7-15c4-4ac7-82f6-b14bcfeb6da6\"",
+                    "properties": {
+                        "provisioningState": "Succeeded",
+                        "publicCertData": "MIIC5zCCAc+gAwIBAgIQboQxoY8+frhBLV6d+MUIujANBgkqhkiG9w0BAQsFADAW MRQwEgYDVQQDDAtQMlNSb290Q2VydDAeFw0yNTA1MDcxMjUzMDNaFw0yNzA1MDcx MzAzMDBaMBYxFDASBgNVBAMMC1AyU1Jvb3RDZXJ0MIIBIjANBgkqhkiG9w0BAQEF AAOCAQ8AMIIBCgKCAQEAsMeB08W7uIOCXDS/vrKJ1kumbWTp0RvGmIKijHzKjeWC CUBkIBPWaUbJ4bOecAeNdyPK1/V7/6iCI6lvSIcS2TTFu9JHNRsk6cKSMgO4MET4 FF+X1HsMFCH7RNIm46GEmfrOxESdEc6kYVnAXVJZ9LlEvWkXsCGTErfvMpPOOlfZ xHVNcfp5o91V2jByAeO0ym6OMy/PdLTCa+L50NwvDiUfqTpHB3V5EP7yYzM4SuIC AtNwbb124J45kNigXl7hWqSNE2wwdCeSMnpOEeJ/ziNMJlBy8r3TutPW5S8PdL6W gcxu+8WNBhnAR5JVD88BGyr1Lh4qdgeeX2I1JTKYJQIDAQABozEwLzAOBgNVHQ8B Af8EBAMCAgQwHQYDVR0OBBYEFLKz+0RSHXmksq+S5UZthR+K7FmTMA0GCSqGSIb3 DQEBCwUAA4IBAQBGpZ8Jl4B2Jvg2iighxLpmHdOEqPm/ts0kkfAkdlqIxDX+Mf8w Qu0hHd1NTZWbJAX4SWvS3b1Xerfalw8Lfn7BFmuddB4JOUQQDKWrLslcGASDMLxA PMPBBJD6MLwchIzXBXDrKfkmnEXWFpzItQsn3G8eus5uJA48PTECe0uX17IqiHU4 7B7FVm9jpKJY86+3u33cNaV8m3Iuo7/b+K1nAO4rSh3i6mAtEGV83HIB1LB3ydNH cYVLcy/iaQjFi4n+aeBZ4cu4u0yWWJGLDxMXnuE6Ykc3rrHWDLpkdSD87RYp8jtE TpGxlECbT3fzH1SgeZ2/E1UcKByPMxlPpT1u"
+                    },
+                    "type": "Microsoft.Network/virtualNetworkGateways/vpnClientRootCertificates"
+                }
+            ],
+            "vpnClientRevokedCertificates": [],
+            "vngClientConnectionConfigurations": [],
+            "vpnClientConnectionHealth": {
+                "vpnClientConnectionsCount": 0,
+                "totalIngressBytesTransferred": 0,
+                "totalEgressBytesTransferred": 0
+            },
+            "radiusServers": [],
+            "vpnClientIpsecPolicies": []
+        },
+        "bgpSettings": {
+            "asn": 65515,
+            "bgpPeeringAddress": "10.0.2.30",
+            "peerWeight": 0,
+            "bgpPeeringAddresses": [
+                {
+                    "ipconfigurationId": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworkGateways/VPNGW1/ipConfigurations/default",
+                    "defaultBgpIpAddresses": [
+                        "10.0.2.30"
+                    ],
+                    "customBgpIpAddresses": [],
+                    "tunnelIpAddresses": [
+                        "20.192.25.24"
+                    ]
+                }
+            ]
+        },
+        "vpnGatewayGeneration": "Generation1"
+    },
+    "apiVersion": "2017-06-01"
+}
