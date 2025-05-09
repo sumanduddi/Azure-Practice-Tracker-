@@ -1,0 +1,79 @@
+{
+    "name": "VNet1",
+    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/VNet1",
+    "etag": "W/\"03d2d759-f681-4567-bf33-9aab2ed1526a\"",
+    "type": "Microsoft.Network/virtualNetworks",
+    "location": "centralindia",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "339dbce4-2a50-46ba-9e8c-1b44348ea813",
+        "addressSpace": {
+            "addressPrefixes": [
+                "10.0.0.0/16"
+            ]
+        },
+        "encryption": {
+            "enabled": false,
+            "enforcement": "AllowUnencrypted"
+        },
+        "subnets": [
+            {
+                "name": "AzureFirewallSubnet",
+                "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/AzureFirewallSubnet",
+                "etag": "W/\"03d2d759-f681-4567-bf33-9aab2ed1526a\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.2.0/26"
+                    ],
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MYRG/providers/Microsoft.Network/azureFirewalls/FIREWALL1/azureFirewallIpConfigurations/FIREWALL-IP"
+                        }
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "Subnet1",
+                "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/Subnet1",
+                "etag": "W/\"03d2d759-f681-4567-bf33-9aab2ed1526a\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.1.0/24"
+                    ],
+                    "routeTable": {
+                        "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/routeTables/routetable"
+                    },
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MYRG/providers/Microsoft.Network/networkInterfaces/VM1376/ipConfigurations/IPCONFIG1"
+                        }
+                    ],
+                    "serviceEndpoints": [
+                        {
+                            "provisioningState": "Succeeded",
+                            "service": "Microsoft.Storage",
+                            "locations": [
+                                "centralindia",
+                                "southindia"
+                            ]
+                        }
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            }
+        ],
+        "virtualNetworkPeerings": [],
+        "enableDdosProtection": false
+    },
+    "apiVersion": "2024-01-01"
+}
