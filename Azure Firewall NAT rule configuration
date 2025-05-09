@@ -1,0 +1,74 @@
+{
+    "name": "firewall1",
+    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/azureFirewalls/firewall1",
+    "etag": "W/\"ec5a8e24-a43e-48db-bb73-524ac04013a0\"",
+    "type": "Microsoft.Network/azureFirewalls",
+    "location": "centralindia",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "sku": {
+            "name": "AZFW_VNet",
+            "tier": "Standard"
+        },
+        "threatIntelMode": "Alert",
+        "additionalProperties": {},
+        "ipConfigurations": [
+            {
+                "name": "firewall-ip",
+                "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/azureFirewalls/firewall1/azureFirewallIpConfigurations/firewall-ip",
+                "etag": "W/\"ec5a8e24-a43e-48db-bb73-524ac04013a0\"",
+                "type": "Microsoft.Network/azureFirewalls/azureFirewallIpConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAddress": "10.0.2.4",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "publicIPAddress": {
+                        "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/publicIPAddresses/firewall-ip"
+                    },
+                    "subnet": {
+                        "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/AzureFirewallSubnet"
+                    }
+                }
+            }
+        ],
+        "networkRuleCollections": [],
+        "applicationRuleCollections": [],
+        "natRuleCollections": [
+            {
+                "name": "collection1",
+                "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/azureFirewalls/firewall1/natRuleCollections/collection1",
+                "etag": "W/\"ec5a8e24-a43e-48db-bb73-524ac04013a0\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "priority": 5000,
+                    "action": {
+                        "type": "Dnat"
+                    },
+                    "rules": [
+                        {
+                            "name": "rule1",
+                            "protocols": [
+                                "TCP"
+                            ],
+                            "translatedAddress": "10.0.1.4",
+                            "translatedPort": "3389",
+                            "sourceAddresses": [
+                                "*"
+                            ],
+                            "sourceIpGroups": [],
+                            "destinationAddresses": [
+                                "74.225.178.12"
+                            ],
+                            "destinationPorts": [
+                                "3389"
+                            ]
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/azureFirewalls/natRuleCollections"
+            }
+        ]
+    },
+    "apiVersion": "2020-05-01"
+}
