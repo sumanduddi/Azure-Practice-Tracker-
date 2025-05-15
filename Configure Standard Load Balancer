@@ -1,0 +1,146 @@
+{
+    "name": "loadbalancer",
+    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer",
+    "etag": "W/\"88e8cd0a-0666-4951-a387-52f8516cf305\"",
+    "type": "Microsoft.Network/loadBalancers",
+    "location": "centralindia",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "2a88b162-1c64-46d2-b185-e8eb9aa12344",
+        "frontendIPConfigurations": [
+            {
+                "name": "frontend-ip",
+                "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/frontendIPConfigurations/frontend-ip",
+                "etag": "W/\"88e8cd0a-0666-4951-a387-52f8516cf305\"",
+                "type": "Microsoft.Network/loadBalancers/frontendIPConfigurations",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "privateIPAllocationMethod": "Dynamic",
+                    "publicIPAddress": {
+                        "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/publicIPAddresses/frontend-ip"
+                    },
+                    "loadBalancingRules": [
+                        {
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/loadBalancingRules/rule1"
+                        }
+                    ]
+                }
+            }
+        ],
+        "backendAddressPools": [
+            {
+                "name": "web-pool",
+                "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/backendAddressPools/web-pool",
+                "etag": "W/\"88e8cd0a-0666-4951-a387-52f8516cf305\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "loadBalancerBackendAddresses": [
+                        {
+                            "name": "VM1_group_vm2915_z2ipconfig1",
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/backendAddressPools/web-pool/loadBalancerBackendAddresses/VM1_group_vm2915_z2ipconfig1",
+                            "etag": "W/\"88e8cd0a-0666-4951-a387-52f8516cf305\"",
+                            "properties": {
+                                "provisioningState": "Succeeded",
+                                "networkInterfaceIPConfiguration": {
+                                    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/networkInterfaces/vm2915_z2/ipConfigurations/ipconfig1"
+                                }
+                            },
+                            "type": "Microsoft.Network/loadBalancers/backendAddressPools/loadBalancerBackendAddresses"
+                        },
+                        {
+                            "name": "VM1_group_vm1145_z1ipconfig1",
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/backendAddressPools/web-pool/loadBalancerBackendAddresses/VM1_group_vm1145_z1ipconfig1",
+                            "etag": "W/\"88e8cd0a-0666-4951-a387-52f8516cf305\"",
+                            "properties": {
+                                "provisioningState": "Succeeded",
+                                "networkInterfaceIPConfiguration": {
+                                    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/networkInterfaces/vm1145_z1/ipConfigurations/ipconfig1"
+                                }
+                            },
+                            "type": "Microsoft.Network/loadBalancers/backendAddressPools/loadBalancerBackendAddresses"
+                        }
+                    ],
+                    "backendIPConfigurations": [
+                        {
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/networkInterfaces/vm2915_z2/ipConfigurations/ipconfig1"
+                        },
+                        {
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/networkInterfaces/vm1145_z1/ipConfigurations/ipconfig1"
+                        }
+                    ],
+                    "loadBalancingRules": [
+                        {
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/loadBalancingRules/rule1"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/loadBalancers/backendAddressPools"
+            }
+        ],
+        "loadBalancingRules": [
+            {
+                "name": "rule1",
+                "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/loadBalancingRules/rule1",
+                "etag": "W/\"88e8cd0a-0666-4951-a387-52f8516cf305\"",
+                "type": "Microsoft.Network/loadBalancers/loadBalancingRules",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "frontendIPConfiguration": {
+                        "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/frontendIPConfigurations/frontend-ip"
+                    },
+                    "frontendPort": 80,
+                    "backendPort": 80,
+                    "enableFloatingIP": false,
+                    "idleTimeoutInMinutes": 4,
+                    "protocol": "Tcp",
+                    "enableDestinationServiceEndpoint": false,
+                    "enableTcpReset": false,
+                    "allowBackendPortConflict": false,
+                    "loadDistribution": "Default",
+                    "disableOutboundSnat": true,
+                    "backendAddressPool": {
+                        "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/backendAddressPools/web-pool"
+                    },
+                    "backendAddressPools": [
+                        {
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/backendAddressPools/web-pool"
+                        }
+                    ],
+                    "probe": {
+                        "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/probes/healthprobe1"
+                    }
+                }
+            }
+        ],
+        "probes": [
+            {
+                "name": "healthprobe1",
+                "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/probes/healthprobe1",
+                "etag": "W/\"88e8cd0a-0666-4951-a387-52f8516cf305\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "protocol": "Tcp",
+                    "port": 80,
+                    "intervalInSeconds": 5,
+                    "numberOfProbes": 1,
+                    "probeThreshold": 1,
+                    "loadBalancingRules": [
+                        {
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/VM1_group/providers/Microsoft.Network/loadBalancers/loadbalancer/loadBalancingRules/rule1"
+                        }
+                    ]
+                },
+                "type": "Microsoft.Network/loadBalancers/probes"
+            }
+        ],
+        "inboundNatRules": [],
+        "outboundRules": [],
+        "inboundNatPools": []
+    },
+    "sku": {
+        "name": "Standard",
+        "tier": "Regional"
+    },
+    "apiVersion": "2023-02-01"
+}
