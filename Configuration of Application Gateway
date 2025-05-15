@@ -1,0 +1,69 @@
+{
+    "name": "VNet1",
+    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/VNet1",
+    "etag": "W/\"b8173079-19ff-40c4-bb23-102326d2d065\"",
+    "type": "Microsoft.Network/virtualNetworks",
+    "location": "centralindia",
+    "tags": {},
+    "properties": {
+        "provisioningState": "Succeeded",
+        "resourceGuid": "5f7406b9-23e6-44d0-909f-9559c4f95a39",
+        "addressSpace": {
+            "addressPrefixes": [
+                "10.0.0.0/16"
+            ]
+        },
+        "encryption": {
+            "enabled": false,
+            "enforcement": "AllowUnencrypted"
+        },
+        "subnets": [
+            {
+                "name": "vm-subnet",
+                "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/vm-subnet",
+                "etag": "W/\"b8173079-19ff-40c4-bb23-102326d2d065\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.1.0/24"
+                    ],
+                    "ipConfigurations": [
+                        {
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MYRG/providers/Microsoft.Network/networkInterfaces/VM1224/ipConfigurations/IPCONFIG1"
+                        },
+                        {
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MYRG/providers/Microsoft.Network/networkInterfaces/VM273/ipConfigurations/IPCONFIG1"
+                        }
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            },
+            {
+                "name": "app-gtway-subnet",
+                "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/app-gtway-subnet",
+                "etag": "W/\"b8173079-19ff-40c4-bb23-102326d2d065\"",
+                "properties": {
+                    "provisioningState": "Succeeded",
+                    "addressPrefixes": [
+                        "10.0.2.0/24"
+                    ],
+                    "applicationGatewayIPConfigurations": [
+                        {
+                            "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Network/applicationGateways/appgateway/gatewayIPConfigurations/appGatewayIpConfig"
+                        }
+                    ],
+                    "delegations": [],
+                    "privateEndpointNetworkPolicies": "Disabled",
+                    "privateLinkServiceNetworkPolicies": "Enabled"
+                },
+                "type": "Microsoft.Network/virtualNetworks/subnets"
+            }
+        ],
+        "virtualNetworkPeerings": [],
+        "enableDdosProtection": false
+    },
+    "apiVersion": "2024-01-01"
+}
