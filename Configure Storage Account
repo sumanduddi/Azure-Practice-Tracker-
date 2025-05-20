@@ -1,0 +1,73 @@
+{
+    "sku": {
+        "name": "Standard_RAGRS",
+        "tier": "Standard"
+    },
+    "kind": "StorageV2",
+    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Storage/storageAccounts/storageaccountsta1",
+    "name": "storageaccountsta1",
+    "type": "Microsoft.Storage/storageAccounts",
+    "location": "centralindia",
+    "tags": {},
+    "properties": {
+        "dnsEndpointType": "Standard",
+        "defaultToOAuthAuthentication": false,
+        "publicNetworkAccess": "Enabled",
+        "keyCreationTime": {
+            "key1": "2025-05-20T07:59:37.3533605Z",
+            "key2": "2025-05-20T07:59:37.3533605Z"
+        },
+        "allowCrossTenantReplication": false,
+        "privateEndpointConnections": [],
+        "minimumTlsVersion": "TLS1_2",
+        "allowBlobPublicAccess": false,
+        "allowSharedKeyAccess": true,
+        "largeFileSharesState": "Enabled",
+        "networkAcls": {
+            "bypass": "AzureServices",
+            "virtualNetworkRules": [],
+            "ipRules": [],
+            "defaultAction": "Allow"
+        },
+        "supportsHttpsTrafficOnly": true,
+        "encryption": {
+            "requireInfrastructureEncryption": false,
+            "services": {
+                "file": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2025-05-20T07:59:37.3533605Z"
+                },
+                "blob": {
+                    "keyType": "Account",
+                    "enabled": true,
+                    "lastEnabledTime": "2025-05-20T07:59:37.3533605Z"
+                }
+            },
+            "keySource": "Microsoft.Storage"
+        },
+        "accessTier": "Hot",
+        "provisioningState": "Succeeded",
+        "creationTime": "2025-05-20T07:59:37.2909032Z",
+        "primaryEndpoints": {
+            "dfs": "https://storageaccountsta1.dfs.core.windows.net/",
+            "web": "https://storageaccountsta1.z29.web.core.windows.net/",
+            "blob": "https://storageaccountsta1.blob.core.windows.net/",
+            "queue": "https://storageaccountsta1.queue.core.windows.net/",
+            "table": "https://storageaccountsta1.table.core.windows.net/",
+            "file": "https://storageaccountsta1.file.core.windows.net/"
+        },
+        "primaryLocation": "centralindia",
+        "statusOfPrimary": "available",
+        "secondaryLocation": "southindia",
+        "statusOfSecondary": "available",
+        "secondaryEndpoints": {
+            "dfs": "https://storageaccountsta1-secondary.dfs.core.windows.net/",
+            "web": "https://storageaccountsta1-secondary.z29.web.core.windows.net/",
+            "blob": "https://storageaccountsta1-secondary.blob.core.windows.net/",
+            "queue": "https://storageaccountsta1-secondary.queue.core.windows.net/",
+            "table": "https://storageaccountsta1-secondary.table.core.windows.net/"
+        }
+    },
+    "apiVersion": "2022-05-01"
+}
