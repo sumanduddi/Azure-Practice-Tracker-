@@ -1,0 +1,98 @@
+{
+    "properties": {
+        "sku": "Standard",
+        "isCreatedFromStandbyPool": false,
+        "provisioningState": "Succeeded",
+        "provisioningTimeoutInSeconds": 1800,
+        "isCustomProvisioningTimeout": false,
+        "containers": [
+            {
+                "name": "containerinstance",
+                "properties": {
+                    "image": "mcr.microsoft.com/azuredocs/aci-helloworld:latest",
+                    "ports": [
+                        {
+                            "protocol": "TCP",
+                            "port": 80
+                        }
+                    ],
+                    "environmentVariables": [],
+                    "configMap": {
+                        "keyValuePairs": {}
+                    },
+                    "instanceView": {
+                        "restartCount": 0,
+                        "currentState": {
+                            "state": "Running",
+                            "startTime": "2025-05-22T14:45:32.265Z",
+                            "detailStatus": ""
+                        },
+                        "events": [
+                            {
+                                "count": 1,
+                                "firstTimestamp": "2025-05-22T14:45:20Z",
+                                "lastTimestamp": "2025-05-22T14:45:20Z",
+                                "name": "Pulling",
+                                "message": "pulling image \"mcr.microsoft.com/azuredocs/aci-helloworld@sha256:b9cec4d6b50c6bf25e3f7f93bdc1628e5dca972cf132d38ed8f5bc955bb179c3\"",
+                                "type": "Normal"
+                            },
+                            {
+                                "count": 1,
+                                "firstTimestamp": "2025-05-22T14:45:22Z",
+                                "lastTimestamp": "2025-05-22T14:45:22Z",
+                                "name": "Pulled",
+                                "message": "Successfully pulled image \"mcr.microsoft.com/azuredocs/aci-helloworld@sha256:b9cec4d6b50c6bf25e3f7f93bdc1628e5dca972cf132d38ed8f5bc955bb179c3\"",
+                                "type": "Normal"
+                            },
+                            {
+                                "count": 1,
+                                "firstTimestamp": "2025-05-22T14:45:32Z",
+                                "lastTimestamp": "2025-05-22T14:45:32Z",
+                                "name": "Started",
+                                "message": "Started container",
+                                "type": "Normal"
+                            }
+                        ]
+                    },
+                    "resources": {
+                        "requests": {
+                            "memoryInGB": 1.5,
+                            "cpu": 1
+                        }
+                    }
+                }
+            }
+        ],
+        "initContainers": [],
+        "restartPolicy": "OnFailure",
+        "ipAddress": {
+            "ports": [
+                {
+                    "protocol": "TCP",
+                    "port": 80
+                }
+            ],
+            "ip": "4.224.164.224",
+            "type": "Public",
+            "dnsNameLabel": "container",
+            "fqdn": "container.hzcvgwbbfwgqede3.centralindia.azurecontainer.io"
+        },
+        "osType": "Linux",
+        "instanceView": {
+            "events": [],
+            "state": "Running"
+        },
+        "diagnostics": {
+            "logAnalytics": {
+                "workspaceId": "e4f5fda7-0557-44ef-beb5-6c2ecf56c568",
+                "logType": "ContainerInstanceLogs"
+            }
+        }
+    },
+    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.ContainerInstance/containerGroups/containerinstance",
+    "name": "containerinstance",
+    "type": "Microsoft.ContainerInstance/containerGroups",
+    "location": "centralindia",
+    "tags": {},
+    "apiVersion": "2019-12-01"
+}
