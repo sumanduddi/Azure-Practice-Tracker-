@@ -1,0 +1,35 @@
+{
+    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/microsoft.insights/activitylogalerts/Alert1",
+    "name": "Alert1",
+    "type": "Microsoft.Insights/ActivityLogAlerts",
+    "location": "global",
+    "tags": {},
+    "properties": {
+        "scopes": [
+            "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MYRG/providers/Microsoft.Compute/virtualMachines/VM1"
+        ],
+        "condition": {
+            "allOf": [
+                {
+                    "field": "category",
+                    "equals": "Administrative"
+                },
+                {
+                    "field": "operationName",
+                    "equals": "Microsoft.Compute/virtualMachines/restart/action"
+                }
+            ]
+        },
+        "actions": {
+            "actionGroups": [
+                {
+                    "actionGroupId": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourcegroups/myrg/providers/microsoft.insights/actiongroups/ag",
+                    "webhookProperties": {}
+                }
+            ]
+        },
+        "enabled": true,
+        "description": ""
+    },
+    "apiVersion": "2017-04-01"
+}
