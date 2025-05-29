@@ -1,0 +1,131 @@
+{
+    "properties": {
+        "immutableId": "dcr-3660dbd332574392b80ed5ba89339ad4",
+        "streamDeclarations": {},
+        "dataSources": {
+            "performanceCounters": [
+                {
+                    "streams": [
+                        "Microsoft-Perf"
+                    ],
+                    "samplingFrequencyInSeconds": 60,
+                    "counterSpecifiers": [
+                        "\\Processor Information(_Total)\\% Processor Time",
+                        "\\Processor Information(_Total)\\% Privileged Time",
+                        "\\Processor Information(_Total)\\% User Time",
+                        "\\Processor Information(_Total)\\Processor Frequency",
+                        "\\System\\Processes",
+                        "\\Process(_Total)\\Thread Count",
+                        "\\Process(_Total)\\Handle Count",
+                        "\\System\\System Up Time",
+                        "\\System\\Context Switches/sec",
+                        "\\System\\Processor Queue Length",
+                        "\\Memory\\% Committed Bytes In Use",
+                        "\\Memory\\Available Bytes",
+                        "\\Memory\\Committed Bytes",
+                        "\\Memory\\Cache Bytes",
+                        "\\Memory\\Pool Paged Bytes",
+                        "\\Memory\\Pool Nonpaged Bytes",
+                        "\\Memory\\Pages/sec",
+                        "\\Memory\\Page Faults/sec",
+                        "\\Process(_Total)\\Working Set",
+                        "\\Process(_Total)\\Working Set - Private",
+                        "\\LogicalDisk(_Total)\\% Disk Time",
+                        "\\LogicalDisk(_Total)\\% Disk Read Time",
+                        "\\LogicalDisk(_Total)\\% Disk Write Time",
+                        "\\LogicalDisk(_Total)\\% Idle Time",
+                        "\\LogicalDisk(_Total)\\Disk Bytes/sec",
+                        "\\LogicalDisk(_Total)\\Disk Read Bytes/sec",
+                        "\\LogicalDisk(_Total)\\Disk Write Bytes/sec",
+                        "\\LogicalDisk(_Total)\\Disk Transfers/sec",
+                        "\\LogicalDisk(_Total)\\Disk Reads/sec",
+                        "\\LogicalDisk(_Total)\\Disk Writes/sec",
+                        "\\LogicalDisk(_Total)\\Avg. Disk sec/Transfer",
+                        "\\LogicalDisk(_Total)\\Avg. Disk sec/Read",
+                        "\\LogicalDisk(_Total)\\Avg. Disk sec/Write",
+                        "\\LogicalDisk(_Total)\\Avg. Disk Queue Length",
+                        "\\LogicalDisk(_Total)\\Avg. Disk Read Queue Length",
+                        "\\LogicalDisk(_Total)\\Avg. Disk Write Queue Length",
+                        "\\LogicalDisk(_Total)\\% Free Space",
+                        "\\LogicalDisk(_Total)\\Free Megabytes",
+                        "\\Network Interface(*)\\Bytes Total/sec",
+                        "\\Network Interface(*)\\Bytes Sent/sec",
+                        "\\Network Interface(*)\\Bytes Received/sec",
+                        "\\Network Interface(*)\\Packets/sec",
+                        "\\Network Interface(*)\\Packets Sent/sec",
+                        "\\Network Interface(*)\\Packets Received/sec",
+                        "\\Network Interface(*)\\Packets Outbound Errors",
+                        "\\Network Interface(*)\\Packets Received Errors"
+                    ],
+                    "name": "perfCounterDataSource60"
+                }
+            ],
+            "windowsEventLogs": [
+                {
+                    "streams": [
+                        "Microsoft-Event"
+                    ],
+                    "xPathQueries": [
+                        "Application!*[System[(Level=1 or Level=2 or Level=3)]]",
+                        "Security!*[System[(band(Keywords,13510798882111488))]]",
+                        "System!*[System[(Level=1 or Level=2 or Level=3)]]"
+                    ],
+                    "name": "eventLogsDataSource"
+                }
+            ]
+        },
+        "destinations": {
+            "logAnalytics": [
+                {
+                    "workspaceResourceId": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.OperationalInsights/workspaces/myworkspace001",
+                    "workspaceId": "9a88c3fe-7abf-4e66-a7c7-90e2f9b68240",
+                    "name": "la--1416652271"
+                },
+                {
+                    "workspaceResourceId": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.OperationalInsights/workspaces/myworkspace002",
+                    "workspaceId": "049773f6-c636-4188-854a-86e32406b7f5",
+                    "name": "la--1768918493"
+                }
+            ]
+        },
+        "dataFlows": [
+            {
+                "streams": [
+                    "Microsoft-Perf"
+                ],
+                "destinations": [
+                    "la--1416652271"
+                ],
+                "transformKql": "source",
+                "outputStream": "Microsoft-Perf"
+            },
+            {
+                "streams": [
+                    "Microsoft-Event"
+                ],
+                "destinations": [
+                    "la--1768918493"
+                ],
+                "transformKql": "source",
+                "outputStream": "Microsoft-Event"
+            }
+        ],
+        "provisioningState": "Succeeded"
+    },
+    "location": "centralindia",
+    "tags": {},
+    "kind": "Windows",
+    "id": "/subscriptions/515558c6-7ce3-48c4-acf1-7f94661145b7/resourceGroups/MyRG/providers/Microsoft.Insights/dataCollectionRules/DCR-1",
+    "name": "DCR-1",
+    "type": "Microsoft.Insights/dataCollectionRules",
+    "etag": "\"19001665-0000-2000-0000-6838274a0000\"",
+    "systemData": {
+        "createdBy": "sumanduddi18@gmail.com",
+        "createdByType": "User",
+        "createdAt": "2025-05-29T09:22:14.5212174Z",
+        "lastModifiedBy": "sumanduddi18@gmail.com",
+        "lastModifiedByType": "User",
+        "lastModifiedAt": "2025-05-29T09:22:14.5212174Z"
+    },
+    "apiVersion": "2022-06-01"
+}
